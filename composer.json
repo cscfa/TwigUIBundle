@@ -1,0 +1,28 @@
+{
+	"name" : "cscfa/twig_ui_bundle",
+	"description" : "The TwigUIBundle is a symfony2 bundle that provide process to use modules",
+	"version" : "1.0.0",
+	"type" : "library",
+	"keywords" : [
+		"cscfa",
+		"module"
+	],
+	"time" : "2016-03-23",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Matthieu Vallance",
+			"email" : "matthieu.vallance@cscfa.fr",
+			"homepage" : "http://www.cscfa.fr",
+			"role" : "Developer"
+		}
+	],
+	"require" : {
+		"php" : ">=5.3.9",
+		"symfony/framework-bundle" : "~2.1"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Cscfa\\Bundle\\TwigUIBundle\\" : ""
+		}
+	}
+}
