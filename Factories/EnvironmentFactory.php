@@ -220,7 +220,8 @@ class EnvironmentFactory
             ->addTwigHierarchy($instance);
 
         if (array_key_exists('ObjectContainer', $options)) {
-            $this->ocBuilder->setElement($instance->getObjectsContainer());
+            $objectContainer = $instance->getObjectsContainer();
+            $this->ocBuilder->setElement($objectContainer);
             foreach ($options['ObjectContainer'] as $element) {
                 foreach ($element as $property => $data) {
                     $this->ocBuilder->add($property, $data);
@@ -229,7 +230,8 @@ class EnvironmentFactory
             $instance->setObjectsContainer($this->ocBuilder->getResult());
         }
         if (array_key_exists('ControllerInfo', $options)) {
-            $this->ciBuilder->setElement($instance->getControllerInfo());
+            $controllerInfo = $instance->getControllerInfo();
+            $this->ciBuilder->setElement($controllerInfo);
             foreach ($options['ControllerInfo'] as $element) {
                 foreach ($element as $property => $data) {
                     $this->ciBuilder->add($property, $data);
@@ -238,7 +240,8 @@ class EnvironmentFactory
             $instance->setControllerInfo($this->ciBuilder->getResult());
         }
         if (array_key_exists('TwigRequests', $options)) {
-            $this->triBuilder->setElement($instance->getTwigRequests());
+            $twigRequest = $instance->getTwigRequests();
+            $this->triBuilder->setElement($twigRequest);
             foreach ($options['TwigRequests'] as $element) {
                 foreach ($element as $property => $data) {
                     $this->triBuilder->add($property, $data);
