@@ -1,7 +1,7 @@
 {
 	"name" : "cscfa/twig_ui_bundle",
 	"description" : "The TwigUIBundle is a symfony2 bundle that provide process to use modules",
-	"version" : "1.0.0",
+	"version" : "1.0.1",
 	"type" : "library",
 	"keywords" : [
 		"cscfa",
